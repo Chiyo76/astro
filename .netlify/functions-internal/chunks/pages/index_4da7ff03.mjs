@@ -1,4 +1,5 @@
-<!DOCTYPE html>
+function render({ slots: ___SLOTS___ }) {
+		return `<!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
 
 <head>
@@ -328,4 +329,8 @@
     </script>
 </body>
 
-</html>
+</html>`
+	}
+render["astro:html"] = true;
+
+export { render as default };
