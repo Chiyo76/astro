@@ -1,13 +1,14 @@
 import * as adapter from '@astrojs/netlify/netlify-functions.js';
 import { renderers } from './renderers.mjs';
-import { manifest } from './manifest_60acc534.mjs';
+import { manifest } from './manifest_ebade903.mjs';
 
 const _page0  = () => import('./chunks/generic_ae3e7f82.mjs');
-const _page1  = () => import('./chunks/index_bb612b45.mjs');
-const _page2  = () => import('./chunks/folio-1_d7fd141a.mjs');
-const _page3  = () => import('./chunks/about_21b38197.mjs');
-const _page4  = () => import('./chunks/post-1_d1e8935b.mjs');
-const _page5  = () => import('./chunks/post-2_c3e8c7c0.mjs');const pageMap = new Map([["node_modules/astro/dist/assets/endpoint/generic.js", _page0],["src/pages/index.astro", _page1],["src/pages/portfolio/folio-1.html", _page2],["src/pages/about.astro", _page3],["src/pages/blog/post-1.md", _page4],["src/pages/blog/post-2.html", _page5]]);
+const _page1  = () => import('./chunks/index_19e3c44d.mjs');
+const _page2  = () => import('./chunks/index_19ca399d.mjs');
+const _page3  = () => import('./chunks/folio-1_d7fd141a.mjs');
+const _page4  = () => import('./chunks/about_21b38197.mjs');
+const _page5  = () => import('./chunks/post-1_d1e8935b.mjs');
+const _page6  = () => import('./chunks/post-2_c3e8c7c0.mjs');const pageMap = new Map([["node_modules/astro/dist/assets/endpoint/generic.js", _page0],["src/pages/index.astro", _page1],["src/pages/ch1yoCoffee/index.html", _page2],["src/pages/portfolio/folio-1.html", _page3],["src/pages/about.astro", _page4],["src/pages/blog/post-1.md", _page5],["src/pages/blog/post-2.html", _page6]]);
 const _manifest = Object.assign(manifest, {
 	pageMap,
 	renderers,
