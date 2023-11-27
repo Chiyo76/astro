@@ -1,6 +1,14 @@
-<nav>
-    <a href="/portfolio/folio-1">作品集一</a>
-    <a href="/about">作品集二</a>
-    <a href="/blog/post-1">作品集三</a>
-    <a href="/ch1yoCoffee/ch1yoCoffee">作品集四</a>
+---
+const {logo} = Astro.props
+---
+
+<nav class="flex mx-auto justify-between p-2 text-2xl font-bold bg-slate-500">
+    <a href="#">{logo}</a>
+    <div class="flex space-x-2">
+        <a href="/portfolio/folio-1">作品集一</a>
+        <a href="/about">作品集二</a>
+        <a href="/blog/post-1">作品集三</a>
+        <a href="/ch1yoCoffee/ch1yoCoffee">作品集四</a>
+    </div>
+    <a href="#">登入/註冊</a>
 </nav>

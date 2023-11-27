@@ -1,18 +1,40 @@
 ---
 import Nav from '../components/Nav.astro'
 import Header from '../components/Header.astro'
+import {ViewTransitions} from 'astro:transitions'
+// astro內建功能 可以淡入slot區域
+const {pageTitle} = Astro.props
 ---
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>76 Site  {pageTitle && '- '+pageTitle}</title>
+
+    <ViewTransitions />
+
+    <script is:inline src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+
+    <script is:inline src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
 </head>
 <body>
-    <Nav />
+    <Nav logo="連成電腦" />
     <Header />
     <slot />
+    <div class="h-[900px]"></div>
     <!-- 要放 <slot /> 就可以套用樣板自定義內容 -->
+    <script>
+        gsap.timeline({
+            scrollTrigger:{
+                trigger:'Header',
+                markers: true,
+                start: '75% 50%',
+                end: '+=50%',
+                scrub: 3,
+            }
+        })
+        .to('Header figcaption',{x:300,opacity:0,rotate:360})
+   </script>
 </body>
 </html>

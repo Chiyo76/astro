@@ -1,0 +1,104 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+  html {
+    scroll-behavior: smooth;
+}
+
+body {
+    overflow-x: hidden;
+}
+/* 可以讓左右超出的隱藏，處理左右留白 */
+
+header,section {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+}
+header {
+    background-color: rgb(108, 92, 247);
+}
+header h1 {
+    position: absolute;
+    width: fit-content;
+    height: fit-content;
+    margin: auto;
+    inset: 0;
+    font-size: 8rem;
+    z-index: 15;
+    text-shadow: 4px 4px 10px rgb(0 0 0 / .5);
+    flex: 1 1 100%;
+}
+img {
+    width: 400px;
+    position: absolute;
+}
+#first {
+    background-color: #ccc;
+    .right {
+        top: 10%;
+        right: 15%;
+        z-index: 20;
+        filter: drop-shadow(8px 8px 10px rgb(0 0 0 / .3));
+
+    }
+    .left {
+        bottom: 10%;
+        left:15%;
+        z-index: 10;
+        filter: drop-shadow(8px 8px 10px rgb(0 0 0 / .3));
+    }
+    .title {
+        position: absolute;
+        width: fit-content;
+        height: fit-content;
+        inset:0;
+        margin: auto;
+        font-size: 8rem;
+        z-index: 15;
+        text-shadow: 4px 4px 10px rgb(0 0 0 / .5);
+    }
+}
+#second {
+    background-color: #545;
+    .right {
+        top: 10%;
+        right: 15%;
+        z-index: 20;
+        filter: drop-shadow(8px 8px 10px rgb(0 0 0 / .3));
+
+    }
+    .left {
+        bottom: 10%;
+        left:15%;
+        z-index: 10;
+        filter: drop-shadow(8px 8px 10px rgb(0 0 0 / .3));
+    }
+    .title {
+        position: absolute;
+        width: fit-content;
+        height: fit-content;
+        inset:0;
+        margin: auto;
+        font-size: 8rem;
+        z-index: 15;
+        text-shadow: 4px 4px 10px rgb(0 0 0 / .5);
+        color: #fff;
+    }
+}
+
+footer {
+    height: 100vh;
+}
+.loading {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 5px;
+    z-index: 100;
+    background-color: red;
+}

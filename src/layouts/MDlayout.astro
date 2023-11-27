@@ -1,0 +1,11 @@
+---
+import Master from '../layouts/Master.astro'
+const {frontmatter} = Astro.props
+---
+<Master pageTitle={frontmatter.title}>
+   <h2>{frontmatter.title}</h2>
+   <div transition:animate="slide">發布日期{frontmatter.pubDate}</div>
+   <!-- astro內建功能 滑入動畫 -->
+   <slot /> 
+   <a href="/">返回</a>
+</Master>
