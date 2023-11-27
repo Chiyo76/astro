@@ -1,62 +1,8 @@
 ---
-import Nav from "../components/Nav.astro";
+import Master from '../layouts/Master.astro'
 ---
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <script is:inline src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-    <!-- 在astro裡加is:inline才能套cdn(副檔名為html則不用)  -->
-    <script is:inline src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        header {
-            height: 100vh;
-            background-color: #ffb7b7;
-        }
-        .box {
-            width: 100px;
-            height: 100px;
-            background-color: #098;
-        }
-        section {
-            height: 100vh;
-            background-color: #b7ecff;
-
-        }
-    </style>
-<body>
-    <header>
-        <Nav />
-    </header>
-    <div class="box"></div>
-    <section></section>
-    <script>
-        gsap.registerPlugin('ScrollTrigger');
-        gsap.to(".box", {
-            // scrollTrigger:'.box',
-            scrollTrigger:{
-                trigger:'.box',
-                markers: true,
-                start:'top 66%',
-                end:'bottom 33%',
-                toggleActions: 'play pause reverse reset',
-                // restart pause reverse reset complete resume play none
-                // 進入 離開 反向進入 反向離開 完成 恢復 開始
-                scrub: 2,
-                pin: true
-            },
-            x: 500,
-            rotate:360,
-            duration:2
-        });
-    </script>
-</body>
-
-</html>
+<Master>
+	<p>
+		我是內容
+	</p>
+</Master>
