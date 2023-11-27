@@ -1,5 +1,6 @@
 ---
-
+import Nav from '../components/Nav.astro'
+import Header from '../components/Header.astro'
 ---
 <!DOCTYPE html>
 <html lang="en">
@@ -9,7 +10,8 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>我是樣板</h1>
+    <Nav />
+    <Header />
     <slot />
     <!-- 要放 <slot /> 就可以套用樣板自定義內容 -->
 </body>
